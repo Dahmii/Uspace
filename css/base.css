@@ -39,7 +39,7 @@ body {
 .demo-12,
 .demo-14 {
   --color-text: #000;
-  --color-bg: #e1e1e1;
+  --color-bg: #ffffff;
   --color-link: rgba(0, 0, 0, 0.6);
   --color-link-hover: #000;
   --color-bg-1: #9d9d9d;
@@ -251,6 +251,7 @@ a:focus-visible {
 }
 
 .frame__heading h2 {
+  color: blue;
   margin: 0;
   line-height: 0.9;
   text-transform: uppercase;
@@ -387,6 +388,7 @@ i {
 }
 
 .content__title {
+  color: #fff;
   grid-area: content-title;
   letter-spacing: -0.095em;
   text-transform: uppercase;
@@ -399,6 +401,7 @@ i {
 }
 
 .content__text {
+  color: #fff;
   margin: 0;
   max-width: 500px;
   grid-area: content-text;
@@ -458,6 +461,44 @@ i {
   background: var(--color-bg-6);
 }
 
+/* The Popup (background) */
+.popup {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Popup Content */
+.popup-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 @media screen and (min-width: 63em) {
   body {
     --page-padding: 2rem 3rem;
@@ -468,6 +509,7 @@ i {
     grid-template-rows: auto 1fr auto;
     align-content: space-between;
     grid-template-areas: "title back prev sub sponsor" "heading heading heading heading heading" "demos demos demos demos demos";
+    background-image: url(img/7.png);
   }
   .frame__heading {
     margin-top: 0;

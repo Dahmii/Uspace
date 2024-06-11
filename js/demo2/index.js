@@ -67,21 +67,3 @@ preloadImages(".content__img").then(() => {
   document.body.classList.remove("loading");
   init();
 });
-
-// Display content description
-document.addEventListener("DOMContentLoaded", () => {
-  const titles = document.querySelectorAll(".content__title");
-  titles.forEach((title) => {
-    title.addEventListener("click", () => {
-      const description = title.nextElementSibling;
-      if (
-        description &&
-        description.classList.contains("content__description")
-      ) {
-        title.style.display = "none";
-        description.style.display = "block";
-        description.style.width = "100%";
-      }
-    });
-  });
-});
